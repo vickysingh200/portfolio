@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>vijay prakash singh · Java & Web Developer</title>
   <!-- SEO friendly -->
-  <meta name="description" content="Modern portfolio of vijay prakash singh – Java & Web Developer. Clean UI, smooth animations, dark mode default.">
+  <meta name="description" content=" portfolio of vijay prakash singh – Java & Web Developer. ">
   <!-- Font Awesome 6 (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Fonts (Inter) -->
+  <link rel="icon" href="image/vijay.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
     /* GLOBAL RESET & VARIABLES - dark mode as default */
@@ -307,6 +308,12 @@
       font-size: 3rem;
       color: var(--primary);
     }
+    .project-img img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+}
     .project-body {
       padding: 24px;
     }
@@ -390,7 +397,7 @@
 <body class="dark">  <!-- default dark mode -->
   <header>
     <div class="container nav-container">
-      <div class="logo">A.C.</div>
+      <div class="logo">V.S.</div>
       <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -481,14 +488,39 @@
     <!-- CONTACT -->
     <section id="contact">
       <div class="container">
-        <h2 class="reveal">Let's connect</h2>
+        <h2 class="reveal">Your Response Me</h2>
         <div class="contact-container reveal">
-          <div class="contact-form">
+          <!--<div class="contact-form">
             <input type="text" placeholder="Your Name" id="contactName">
             <input type="email" placeholder="Email Address" id="contactEmail">
             <textarea placeholder="Message..." id="contactMsg"></textarea>
-            <button class="btn" id="sendMsgBtn">Send message <i class="fas fa-paper-plane"></i></button>
-          </div>
+            <button class="btn" type="" id="sendMsgBtn">Send message <i class="fas fa-paper-plane"></i></button>
+          </div>-->
+          <div class="contact-form">
+            <form id="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" id="contactName">
+
+<input type="email" name="email" placeholder="Email Address" id="contactEmail">
+
+<textarea name="message" placeholder="Message..." id="contactMsg"></textarea>
+
+<button class="btn"  type="submit" id="sendMsgBtn">
+Send message   <i class="fas fa-paper-plane"></i>
+</button>
+
+</form>
+
+ <!---- <form id="contact-form">
+    <input type="text" placeholder="Your Name" name="name" id="contactName" >
+    <input type="email" placeholder="Email Address" name="email" id="contactEmail" >
+    <textarea placeholder="Message..." id="contactMsg" name="massege"></textarea>
+
+    <button class="btn" type="submit" id="sendMsgBtn">
+      Send message <i class="fas fa-paper-plane"></i>
+    </button>
+  </form>-->
+</div>
           <div class="contact-info">
             <p><i class="fas fa-map-marker-alt"></i>DSMNRU-IET Lucknow</p>
             <p><i class="fas fa-envelope"></i>vijayprakashsingh6386@gmail.com</p>
@@ -540,7 +572,7 @@
 
       // ---------- TYPING EFFECT ----------
       const typedSpan = document.getElementById('typed-text');
-      const phrases = ['Java Developer', 'Web Developer', 'Spring Boot Specialist', 'UI/JS Enthusiast'];
+      const phrases = ['Java Developer ', 'Web Developer ', 'Spring Boot Developer ', 'C/C++ DSA '];
       let i = 0, j = 0, current = '', isDeleting = false;
       function typeEffect() {
         if (i < phrases.length) {
@@ -596,19 +628,19 @@
 
       // ---------- PROJECTS + FILTER ----------
       const projects = [
-        { title: 'Online Test', desc: 'online test management with Spring Boot & javascript', category: 'fullstack', github: 'https://github.com/vickysingh200', demo: '#', icon: 'fa-solid fa-list-check' },
-        { title: 'University & Hospital', desc: 'Java / Spring microservices, MySQL, JWT', category: 'java', github: 'https://github.com/vickysingh200', demo: '#', icon: 'fa-solid fa-cart-shopping' },
-        { title: 'Portfolio 4.0', desc: 'Responsive dark/light UI (this site!)', category: 'web', github: 'https://github.com/vickysingh200', demo: '#', icon: 'fa-solid fa-laptop-code' },
-        { title: 'Spotify', desc: 'GitHub user search app using REST API', category: 'web', github: '#', demo: 'https://github.com/vickysingh200', icon: 'fa-brands fa-github' },
-        { title: 'SCM Management', desc: 'Spring Data JPA + PostgreSQL, swagger', category: 'java', github: 'https://github.com/vickysingh200', demo: '#', icon: 'fa-solid fa-pen' },
-        { title: 'Inventory Manager', desc: 'Fullstack: Angular + Spring Boot', category: 'fullstack', github: 'https://github.com/vickysingh200', demo: '#', icon: 'fa-solid fa-boxes' },
+        { title: 'Online Test', desc: 'online test management with Spring Boot & javascript', category: 'fullstack', github: 'https://github.com/vickysingh200', demo: '#', image: 'image/otp.png', icon: 'fa-solid fa-list-check' },
+        { title: 'University', desc: 'Java / Spring microservices, MySQL, JWT', category: 'java', github: 'https://github.com/vickysingh200', demo: '#' , image: 'image/university1.png' , icon: 'fa-solid fa-cart-shopping' },
+        { title: 'Portfolio ', desc: 'Responsive dark/light UI (this site!)', category: 'web', github: 'https://github.com/vickysingh200', demo: '#', image: 'image/port.png', icon: 'fa-solid fa-laptop-code' },
+        { title: 'IIMM AYODHYA', desc: 'Web IIMM AYODHYA HTML, CSS , JS', category: 'web', github: '#', demo: 'https://github.com/vickysingh200', image: 'image/iimm.png', icon: 'fa-brands fa-github' },
+        { title: 'Hospital Management System', desc: 'Spring Data JPA + PostgreSQL, swagger', category: 'java', github: 'https://github.com/vickysingh200', demo: '#', image: 'image/hospital.png', icon: 'fa-solid fa-pen' },
+        { title: 'Inventory Manager', desc: 'Fullstack: Angular + Spring Boot', category: 'fullstack', github: 'https://github.com/vickysingh200', demo: '#', image: 'image/university.png', icon: 'fa-solid fa-boxes' },
       ];
       const projectsGrid = document.getElementById('projectsGrid');
       function renderProjects(filter = 'all') {
         const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
         projectsGrid.innerHTML = filtered.map(p => `
           <div class="project-card" data-category="${p.category}">
-            <div class="project-img"><i class="fas ${p.icon}"></i></div>
+            <div class="project-img">   <img src="${p.image}" alt="${p.title}"></i></div>
             <div class="project-body">
               <h3>${p.title}</h3>
               <p>${p.desc}</p>
@@ -621,6 +653,9 @@
         `).join('');
       }
       renderProjects();
+
+
+
 
       // filter buttons
       document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -660,14 +695,88 @@
         alert('📄 Resume.pdf download started ');
       });
 
-      // contact send simulate
+       /*contact send simulate
       document.getElementById('sendMsgBtn').addEventListener('click', () => {
         const name = document.getElementById('contactName').value.trim();
-        alert(name ? `Thanks ${name}, message sent (demo).` : 'Please fill name (demo).');
-      });
+        //alert(name ? `Thanks ${name}, message sent (demo).` : 'Please fill name (demo).');
+        
+      });*/
+
+
 
     })();
+
+
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  let name = document.getElementById("contactName").value.trim();
+  let email = document.getElementById("contactEmail").value.trim();
+  let message = document.getElementById("contactMsg").value.trim();
+
+  if(name === "" || email === "" || message === ""){
+    Swal.fire({
+      title: "Error!",
+      text: "Please fill all fields.",
+      icon: "error"
+    });
+    return;
+  }
+
+  Swal.fire({
+    title: "Send Message?",
+    html: `
+      <b>Name:</b> ${name}<br>
+      <b>Email:</b> ${email}<br>
+      <b>Message:</b> ${message}
+    `,
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonText: "Yes, Send"
+  }).then((result) => {
+
+    if (result.isConfirmed) {
+
+      emailjs.sendForm(
+        "service_emu0oav",
+        "template_a1ftkfr",
+        "#contact-form"
+      ).then(function(){
+
+        Swal.fire({
+          title: "Success!",
+          text: "Message sent successfully.",
+          icon: "success"
+        });
+
+        document.getElementById("contact-form").reset();
+
+      }, function(error){
+
+        Swal.fire({
+          title: "Error!",
+          text: "Failed to send message.",
+          icon: "error"
+        });
+
+      });
+
+    }
+
+  });
+
+});
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("8gpU3MjPY3kgJSlye");
+})();
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <noscript>Enable JS for animations</noscript>
 </body>
 </html>
